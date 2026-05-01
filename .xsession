@@ -13,14 +13,12 @@ if [ -d /usr/local/share/fonts ]; then
            fi
 
 xidle &
-#xsetroot -solid gray25
 xset b off
 sct 3500 &
 xbanish &
 exec ~/lightmode &
-exec xterm -name batbar -class batbar -e "sh ~/batbar" &
+#exec xterm -name batbar -class batbar -e "sh ~/batbar" &
 sleep 1
-xterm -geometry 98x32 -e "fastfetch; ksh -i" &
-#xterm &
-exec cwm
-#exec xterm -maximized -e "/usr/bin/tmux"
+#xterm -geometry 98x32 -e "fastfetch; ksh -i" &
+#exec cwm
+exec xterm -maximized -e "/usr/bin/tmux"
