@@ -1,0 +1,164 @@
+sticky yes
+snapdist 4
+gap 0 29 0 0 
+
+unbind-key all
+moveamount 1
+
+# KEYBINDINGS:                                                                 
+ # 4 = mod (windows key)                                                        
+ # S = shift                                                                    
+ # C = control                                                                  
+ # M = meta (alt)                                                               
+                                                                                
+#bind XF86AudioRaiseVolume "mixer vol +0.2"
+#bind XF86AudioLowerVolume "mixer vol -0.2"
+
+ # mod + enter = new xterm                                                      
+ bind-key M-Return terminal                                                     
+ # ctrl + alt + L = lock screen (xlock)                                         
+ bind-key CM-l lock                                                             
+ # mod + backspace = hide window        
+ bind-key 4-BackSpace window-hide 
+# mod + down arrow = lower window's focus                                      
+ bind-key 4-Down window-lower                                                   
+ # mod + up arrow = raise window's focus                                        
+ bind-key 4-Up window-raise                                                     
+ # mod/alt + tab = cycle through current windows                                
+ bind-key M-Tab window-cycle                                                    
+ # mod/alt + shift + tab = same thing in reverse                                
+ bind-key MS-Tab window-rcycle                                                  
+ # mod + w = kill window                                                        
+ bind-key M-w window-delete                                                     
+ # set a window's label                                                         
+ bind-key M-n window-menu-label                                                 
+                                                                                
+ # mod + $N = show only windows for group $N                                    
+ # (you can think of this as switching to virtual desktop $N)                   
+ #bind-key M-1 group-only-1                                                      
+ #bind-key M-2 group-only-2                                                      
+ #bind-key M-3 group-only-3                                                      
+ #bind-key M-4 group-only-4                                                      
+ #bind-key M-5 group-only-5                                                      
+ #bind-key M-6 group-only-6                                                      
+ #bind-key M-7 group-only-7                                                      
+ #bind-key M-8 group-only-8                                                      
+ #bind-key M-9 group-only-9                                                      
+                                                                                
+ # mod + shift +$N = move window to group $N                                    
+ #bind-key MS-1 window-movetogroup-1                                             
+ #bind-key MS-2 window-movetogroup-2                                             
+ #bind-key MS-3 window-movetogroup-3                                             
+ #bind-key MS-4 window-movetogroup-4                                             
+ #bind-key MS-5 window-movetogroup-5                                             
+ #bind-key MS-6 window-movetogroup-6                                             
+ #bind-key MS-7 window-movetogroup-7                                             
+ #bind-key MS-8 window-movetogroup-8                                             
+ #bind-key MS-9 window-movetogroup-9                                             
+                                                                                
+ # mod + A = toggle showing windows from all groups                             
+ bind-key M-a group-toggle-all            
+ # mod + G = toggle current window's group membership                           
+ bind-key M-g window-group                                                      
+                                                                                
+ # mod + right arrow = cycle through the window groups                          
+ # (you can think of this as switching to the next virtual desktop)             
+ bind-key 4-Right group-cycle                                                   
+ # mod + left arrow = same thing in reverse                                     
+ bind-key 4-Left group-rcycle                                                   
+ # mod + S = stick current window to be visible in all groups                   
+ bind-key M-s window-stick             
+ # mod + F = make current window fullscreen
+ bind-key M-f window-fullscreen                                                 
+ # mod + M = maximize current window                                            
+ bind-key M-m window-maximize                                                   
+ # mod + equals = maximize window in vertical direction only                    
+ bind-key M-equal window-vmaximize                                              
+ # mod + shift + equals = maximize window in horizontal direction only          
+ bind-key MS-equal window-hmaximize                                             
+                                                                                
+ # mod + H,J,K,L = move window left, down, up, right 10 pixels                  
+ bind-key M-Left window-move-left-big                                              
+ bind-key M-Down window-move-down-big                                              
+ bind-key M-Up window-move-up-big                                                
+ bind-key M-Right window-move-right-big                                             
+                                                                                
+ # mod + shift + H,J,K,L = resize window left, down, up, right by 10 pixels     
+ bind-key MS-Left window-resize-left                                           
+ bind-key MS-Down window-resize-down                                           
+ bind-key MS-Up window-resize-up                                           
+ bind-key MS-Right window-resize-right                                          
+ 
+ #Control + Up,Down,Left,Right = snap
+ bind-key CS-Up window-snap-up
+ bind-key CS-Down window-snap-down
+ bind-key CS-Left window-snap-left
+ bind-key CS-Right window-snap-right
+
+ #bind-key CS-Up window-snap-up-right
+ #bind-key CS-Right window-snap-down-right
+ #bind-key CS-Down window-snap-down-left
+ #bind-key CS-Left window-snap-up-left
+
+                                                                               
+ # mod + V = tile windows vertically, current window to the left                
+ bind-key M-v window-vtile                                                      
+ # mod + V = tile windows horizontally, current window to the top               
+ bind-key M-c window-htile                                                      
+                                                                                
+ # mod + / = show popup menu of current windows                                 
+ bind-key M-slash menu-window                                                   
+ # mod + d = show popup menu to run a command (configured below)                
+ bind-key M-d menu-cmd                                                          
+ # mod + ? = show popup menu to run an arbitrary command                        
+ bind-key M-question menu-exec                                                  
+ # mod + . = show popup menu of known ssh hosts to connect to                   
+ bind-key M-period menu-ssh                                                     
+                                                                                
+ # mod + shift + R = restart cwm, reloading configuration                       
+ bind-key MS-r restart                                                          
+ # mod + shift + E = log out                                                    
+ bind-key MS-e quit                                                             
+                                                                                
+ # unbind default mouse actions                                                 
+ unbind-mouse M-1                                                               
+ unbind-mouse CM-1                                                              
+ unbind-mouse M-2                                                               
+ unbind-mouse M-3                                                               
+ unbind-mouse CMS-3                                                             
+                                                                                
+ # mod + left click drag = move window                                          
+ bind-mouse M-1 window-move                                                     
+ # mod + right click drag = resize window                                       
+ bind-mouse M-3 window-resize                                                   
+ # mod + middle click = lower window's focus                                    
+ bind-mouse M-2 window-lower                                                    
+ # mod + shift + middle click = hide window                                     
+ bind-mouse MS-2 window-hide             
+
+ # these commands will appear in the command menu                               
+ command xterm xterm                                        
+ command xclock xclock                                                          
+ command xcalc xcalc 
+ command " " ""                                                          
+# command abiword abiword
+ command thunar thunar
+ command "  "  " "
+ command firefox firefox
+ command links "xterm -e links www.duckduckgo.com"
+# command dillo dillo
+# command netsurf netsurf-gtk3
+# command "    " "   " 
+# Pavu is for my Void Linux install.
+# command SOUND pavucontrol
+                                                                                
+ # ignore these windows when tiling/cycling                                     
+ ignore xclock       
+ ignore batbar
+
+
+# Appearance
+ borderwidth 4
+ color activeborder "#000000"
+ color inactiveborder "#987A68"
+ color urgencyborder "#c14a4a"

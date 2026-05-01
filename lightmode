@@ -1,0 +1,3 @@
+#!/bin/ksh
+
+xrdb -merge $HOME/.xlight; xsetroot -solid '#f1e49a'

@@ -1,0 +1,24 @@
+ set autoindent
+ set cutfromcursor
+ set tabsize 4
+ set tabstospaces
+ set linenumbers
+ set minibar
+ set positionlog
+ #set trimblanks
+ #set wordbounds
+ set zap
+
+ set titlecolor black,brightgreen
+ set statuscolor black,brightgreen
+ set keycolor black,brightgreen
+ set numbercolor black,brightgreen
+ set minicolor black,lightgreen
+ set promptcolor black,brightgreen
+ set selectedcolor black,brightgreen
+
+
+ set speller "aspell -c"
+ #set breaklonglines
+ set softwrap
+ set atblanks

@@ -1,0 +1,57 @@
+ ! ===== fonts
+ Xft.autohint  : 0
+ Xft.lcdfilter : lcddefault
+ Xft.hintstyle : hintslight
+ Xft.hinting   : 1
+ Xft.antialias : 1
+ Xft.rgba      : rgb
+! *font        :-misc-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-iso10646-
+!xterm*faceName: Monospace
+xterm*faceName: Iosevka:size=9
+!xterm*faceSize: 9
+
+ ! ===== xidle
+ ! drag pointer to lower left corner to lock screen
+ XIdle*position : sw
+ ! and leave it there for one second.
+ XIdle*delay    : 1
+ ! also lock screen after 5 minutes idle
+ XIdle*timeout  : 300
+
+ ! ===== xlock
+ ! actually turn the backlight off
+ XLock.dpmsoff     : 1
+ ! plain green-on-black lock screen
+ XLock.description : off
+ XLock.echokeys    : off
+ XLock.info        :
+ XLock.background  : black
+ XLock.foreground  : Green4
+ XLock.mode        : blank
+ XLock.username    : username:
+ XLock.password    : password:
+ XLock.font        : -misc-fixed-medium-r-normal-*-17-*-*-*-*-*-iso10646-1
+ XLock.planfont    : -misc-fixed-medium-r-normal-*-17-*-*-*-*-*-iso10646-1
+
+
+ ! remove the additional black border
+ XTerm*borderWidth            : 0
+ XTerm*internalBorder         : 2
+ ! set TERM env variable to use 256 colors
+ XTerm*termName               : xterm-256color
+ ! make alt key work normally
+ XTerm*vt100.metaSendsEscape  : true
+ ! save ~10,000 lines of scrollback
+ XTerm*v100.saveLines         : 10240
+ ! hide scrollbar
+ XTerm*vt100.scrollBar        : false
+
+
+batbar*faceName:        RobotoMono NF:style=Bold:size=8
+batbar*geometry:        48x1+0+739
+batbar*internalBorder:  6
+batbar*saveLines:       0
+batbar*scrollBar:       false
+batbar*title:           batbar
+batbar*foreground:      #f9f5d7
+batbar*background:      #654735
